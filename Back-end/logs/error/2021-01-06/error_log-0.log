@@ -1,0 +1,148 @@
+2021-01-06 17:52:24.231 [http-nio-8001-exec-9] ERROR f.k.s.exceptionhandler.GlobalExceptionHandler - / by zero
+2021-01-06 21:57:50.846 [http-nio-8001-exec-6] ERROR f.k.s.exceptionhandler.GlobalExceptionHandler - 
+### Error updating database.  Cause: java.sql.SQLException: Field 'gmt_create' doesn't have a default value
+### The error may involve fun.krits.eduservice.mapper.EduTeacherMapper.insert-Inline
+### The error occurred while setting parameters
+### SQL: INSERT INTO edu_teacher  ( id, name, intro, career, level, avatar, sort, is_deleted )  VALUES  ( ?, ?, ?, ?, ?, ?, ?, ? )
+### Cause: java.sql.SQLException: Field 'gmt_create' doesn't have a default value
+; Field 'gmt_create' doesn't have a default value; nested exception is java.sql.SQLException: Field 'gmt_create' doesn't have a default value
+2021-01-06 21:59:33.678 [http-nio-8001-exec-1] ERROR f.k.s.exceptionhandler.GlobalExceptionHandler - 
+### Error updating database.  Cause: java.sql.SQLException: Field 'gmt_create' doesn't have a default value
+### The error may involve fun.krits.eduservice.mapper.EduTeacherMapper.insert-Inline
+### The error occurred while setting parameters
+### SQL: INSERT INTO edu_teacher  ( id, name, intro, career, level, avatar, sort )  VALUES  ( ?, ?, ?, ?, ?, ?, ? )
+### Cause: java.sql.SQLException: Field 'gmt_create' doesn't have a default value
+; Field 'gmt_create' doesn't have a default value; nested exception is java.sql.SQLException: Field 'gmt_create' doesn't have a default value
+2021-01-06 21:59:55.174 [http-nio-8001-exec-2] ERROR f.k.s.exceptionhandler.GlobalExceptionHandler - 
+### Error updating database.  Cause: java.sql.SQLIntegrityConstraintViolationException: Duplicata du champ 'string' pour la clef 'uk_name'
+### The error may involve fun.krits.eduservice.mapper.EduTeacherMapper.insert-Inline
+### The error occurred while setting parameters
+### SQL: INSERT INTO edu_teacher  ( id, name, intro, career, level, avatar, sort,  gmt_create, gmt_modified )  VALUES  ( ?, ?, ?, ?, ?, ?, ?,  ?, ? )
+### Cause: java.sql.SQLIntegrityConstraintViolationException: Duplicata du champ 'string' pour la clef 'uk_name'
+; Duplicata du champ 'string' pour la clef 'uk_name'; nested exception is java.sql.SQLIntegrityConstraintViolationException: Duplicata du champ 'string' pour la clef 'uk_name'
+2021-01-06 22:02:22.576 [http-nio-8001-exec-4] ERROR f.k.s.exceptionhandler.GlobalExceptionHandler - 
+### Error updating database.  Cause: java.sql.SQLIntegrityConstraintViolationException: Duplicata du champ 'string' pour la clef 'uk_name'
+### The error may involve fun.krits.eduservice.mapper.EduTeacherMapper.insert-Inline
+### The error occurred while setting parameters
+### SQL: INSERT INTO edu_teacher  ( id, name, intro, career, level, avatar, sort,  gmt_create, gmt_modified )  VALUES  ( ?, ?, ?, ?, ?, ?, ?,  ?, ? )
+### Cause: java.sql.SQLIntegrityConstraintViolationException: Duplicata du champ 'string' pour la clef 'uk_name'
+; Duplicata du champ 'string' pour la clef 'uk_name'; nested exception is java.sql.SQLIntegrityConstraintViolationException: Duplicata du champ 'string' pour la clef 'uk_name'
+2021-01-06 22:02:23.280 [http-nio-8001-exec-6] ERROR f.k.s.exceptionhandler.GlobalExceptionHandler - 
+### Error updating database.  Cause: java.sql.SQLIntegrityConstraintViolationException: Duplicata du champ 'string' pour la clef 'uk_name'
+### The error may involve fun.krits.eduservice.mapper.EduTeacherMapper.insert-Inline
+### The error occurred while setting parameters
+### SQL: INSERT INTO edu_teacher  ( id, name, intro, career, level, avatar, sort,  gmt_create, gmt_modified )  VALUES  ( ?, ?, ?, ?, ?, ?, ?,  ?, ? )
+### Cause: java.sql.SQLIntegrityConstraintViolationException: Duplicata du champ 'string' pour la clef 'uk_name'
+; Duplicata du champ 'string' pour la clef 'uk_name'; nested exception is java.sql.SQLIntegrityConstraintViolationException: Duplicata du champ 'string' pour la clef 'uk_name'
+2021-01-06 22:02:23.498 [http-nio-8001-exec-8] ERROR f.k.s.exceptionhandler.GlobalExceptionHandler - 
+### Error updating database.  Cause: java.sql.SQLIntegrityConstraintViolationException: Duplicata du champ 'string' pour la clef 'uk_name'
+### The error may involve fun.krits.eduservice.mapper.EduTeacherMapper.insert-Inline
+### The error occurred while setting parameters
+### SQL: INSERT INTO edu_teacher  ( id, name, intro, career, level, avatar, sort,  gmt_create, gmt_modified )  VALUES  ( ?, ?, ?, ?, ?, ?, ?,  ?, ? )
+### Cause: java.sql.SQLIntegrityConstraintViolationException: Duplicata du champ 'string' pour la clef 'uk_name'
+; Duplicata du champ 'string' pour la clef 'uk_name'; nested exception is java.sql.SQLIntegrityConstraintViolationException: Duplicata du champ 'string' pour la clef 'uk_name'
+2021-01-06 22:02:23.655 [http-nio-8001-exec-9] ERROR f.k.s.exceptionhandler.GlobalExceptionHandler - 
+### Error updating database.  Cause: java.sql.SQLIntegrityConstraintViolationException: Duplicata du champ 'string' pour la clef 'uk_name'
+### The error may involve fun.krits.eduservice.mapper.EduTeacherMapper.insert-Inline
+### The error occurred while setting parameters
+### SQL: INSERT INTO edu_teacher  ( id, name, intro, career, level, avatar, sort,  gmt_create, gmt_modified )  VALUES  ( ?, ?, ?, ?, ?, ?, ?,  ?, ? )
+### Cause: java.sql.SQLIntegrityConstraintViolationException: Duplicata du champ 'string' pour la clef 'uk_name'
+; Duplicata du champ 'string' pour la clef 'uk_name'; nested exception is java.sql.SQLIntegrityConstraintViolationException: Duplicata du champ 'string' pour la clef 'uk_name'
+2021-01-06 22:02:39.152 [http-nio-8001-exec-5] ERROR f.k.s.exceptionhandler.GlobalExceptionHandler - 
+### Error updating database.  Cause: java.sql.SQLIntegrityConstraintViolationException: Duplicata du champ 'xxsws' pour la clef 'uk_name'
+### The error may involve fun.krits.eduservice.mapper.EduTeacherMapper.insert-Inline
+### The error occurred while setting parameters
+### SQL: INSERT INTO edu_teacher  ( id, name, intro, career, level, avatar, sort,  gmt_create, gmt_modified )  VALUES  ( ?, ?, ?, ?, ?, ?, ?,  ?, ? )
+### Cause: java.sql.SQLIntegrityConstraintViolationException: Duplicata du champ 'xxsws' pour la clef 'uk_name'
+; Duplicata du champ 'xxsws' pour la clef 'uk_name'; nested exception is java.sql.SQLIntegrityConstraintViolationException: Duplicata du champ 'xxsws' pour la clef 'uk_name'
+2021-01-06 22:02:52.703 [http-nio-8001-exec-1] ERROR f.k.s.exceptionhandler.GlobalExceptionHandler - 
+### Error updating database.  Cause: java.sql.SQLIntegrityConstraintViolationException: Duplicata du champ 'string' pour la clef 'uk_name'
+### The error may involve fun.krits.eduservice.mapper.EduTeacherMapper.insert-Inline
+### The error occurred while setting parameters
+### SQL: INSERT INTO edu_teacher  ( id, name, intro, career, level, avatar, sort,  gmt_create, gmt_modified )  VALUES  ( ?, ?, ?, ?, ?, ?, ?,  ?, ? )
+### Cause: java.sql.SQLIntegrityConstraintViolationException: Duplicata du champ 'string' pour la clef 'uk_name'
+; Duplicata du champ 'string' pour la clef 'uk_name'; nested exception is java.sql.SQLIntegrityConstraintViolationException: Duplicata du champ 'string' pour la clef 'uk_name'
+2021-01-06 22:49:39.115 [http-nio-8001-exec-3] ERROR f.k.s.exceptionhandler.GlobalExceptionHandler - 
+### Error updating database.  Cause: java.sql.SQLIntegrityConstraintViolationException: Duplicata du champ 'string1' pour la clef 'uk_name'
+### The error may involve fun.krits.eduservice.mapper.EduTeacherMapper.insert-Inline
+### The error occurred while setting parameters
+### SQL: INSERT INTO edu_teacher  ( id, name, intro, career, level, avatar, sort,  gmt_create, gmt_modified )  VALUES  ( ?, ?, ?, ?, ?, ?, ?,  ?, ? )
+### Cause: java.sql.SQLIntegrityConstraintViolationException: Duplicata du champ 'string1' pour la clef 'uk_name'
+; Duplicata du champ 'string1' pour la clef 'uk_name'; nested exception is java.sql.SQLIntegrityConstraintViolationException: Duplicata du champ 'string1' pour la clef 'uk_name'
+2021-01-06 22:49:53.818 [http-nio-8001-exec-8] ERROR f.k.s.exceptionhandler.GlobalExceptionHandler - 
+### Error updating database.  Cause: java.sql.SQLIntegrityConstraintViolationException: Duplicata du champ 'string2' pour la clef 'uk_name'
+### The error may involve fun.krits.eduservice.mapper.EduTeacherMapper.insert-Inline
+### The error occurred while setting parameters
+### SQL: INSERT INTO edu_teacher  ( id, name, intro, career, level, avatar, sort,  gmt_create, gmt_modified )  VALUES  ( ?, ?, ?, ?, ?, ?, ?,  ?, ? )
+### Cause: java.sql.SQLIntegrityConstraintViolationException: Duplicata du champ 'string2' pour la clef 'uk_name'
+; Duplicata du champ 'string2' pour la clef 'uk_name'; nested exception is java.sql.SQLIntegrityConstraintViolationException: Duplicata du champ 'string2' pour la clef 'uk_name'
+2021-01-06 23:14:34.928 [http-nio-8001-exec-1] ERROR f.k.s.exceptionhandler.GlobalExceptionHandler - 
+### Error updating database.  Cause: java.sql.SQLException: Field 'name' doesn't have a default value
+### The error may involve fun.krits.eduservice.mapper.EduTeacherMapper.insert-Inline
+### The error occurred while setting parameters
+### SQL: INSERT INTO edu_teacher  ( id,        gmt_create, gmt_modified )  VALUES  ( ?,        ?, ? )
+### Cause: java.sql.SQLException: Field 'name' doesn't have a default value
+; Field 'name' doesn't have a default value; nested exception is java.sql.SQLException: Field 'name' doesn't have a default value
+2021-01-06 23:14:42.935 [http-nio-8001-exec-2] ERROR f.k.s.exceptionhandler.GlobalExceptionHandler - 
+### Error updating database.  Cause: java.sql.SQLException: Field 'name' doesn't have a default value
+### The error may involve fun.krits.eduservice.mapper.EduTeacherMapper.insert-Inline
+### The error occurred while setting parameters
+### SQL: INSERT INTO edu_teacher  ( id,        gmt_create, gmt_modified )  VALUES  ( ?,        ?, ? )
+### Cause: java.sql.SQLException: Field 'name' doesn't have a default value
+; Field 'name' doesn't have a default value; nested exception is java.sql.SQLException: Field 'name' doesn't have a default value
+2021-01-06 23:15:21.625 [http-nio-8001-exec-3] ERROR f.k.s.exceptionhandler.GlobalExceptionHandler - 
+### Error updating database.  Cause: java.sql.SQLException: Field 'name' doesn't have a default value
+### The error may involve fun.krits.eduservice.mapper.EduTeacherMapper.insert-Inline
+### The error occurred while setting parameters
+### SQL: INSERT INTO edu_teacher  ( id,        gmt_create, gmt_modified )  VALUES  ( ?,        ?, ? )
+### Cause: java.sql.SQLException: Field 'name' doesn't have a default value
+; Field 'name' doesn't have a default value; nested exception is java.sql.SQLException: Field 'name' doesn't have a default value
+2021-01-06 23:15:22.239 [http-nio-8001-exec-8] ERROR f.k.s.exceptionhandler.GlobalExceptionHandler - 
+### Error updating database.  Cause: java.sql.SQLException: Field 'name' doesn't have a default value
+### The error may involve fun.krits.eduservice.mapper.EduTeacherMapper.insert-Inline
+### The error occurred while setting parameters
+### SQL: INSERT INTO edu_teacher  ( id,        gmt_create, gmt_modified )  VALUES  ( ?,        ?, ? )
+### Cause: java.sql.SQLException: Field 'name' doesn't have a default value
+; Field 'name' doesn't have a default value; nested exception is java.sql.SQLException: Field 'name' doesn't have a default value
+2021-01-06 23:15:22.418 [http-nio-8001-exec-4] ERROR f.k.s.exceptionhandler.GlobalExceptionHandler - 
+### Error updating database.  Cause: java.sql.SQLException: Field 'name' doesn't have a default value
+### The error may involve fun.krits.eduservice.mapper.EduTeacherMapper.insert-Inline
+### The error occurred while setting parameters
+### SQL: INSERT INTO edu_teacher  ( id,        gmt_create, gmt_modified )  VALUES  ( ?,        ?, ? )
+### Cause: java.sql.SQLException: Field 'name' doesn't have a default value
+; Field 'name' doesn't have a default value; nested exception is java.sql.SQLException: Field 'name' doesn't have a default value
+2021-01-06 23:15:22.605 [http-nio-8001-exec-6] ERROR f.k.s.exceptionhandler.GlobalExceptionHandler - 
+### Error updating database.  Cause: java.sql.SQLException: Field 'name' doesn't have a default value
+### The error may involve fun.krits.eduservice.mapper.EduTeacherMapper.insert-Inline
+### The error occurred while setting parameters
+### SQL: INSERT INTO edu_teacher  ( id,        gmt_create, gmt_modified )  VALUES  ( ?,        ?, ? )
+### Cause: java.sql.SQLException: Field 'name' doesn't have a default value
+; Field 'name' doesn't have a default value; nested exception is java.sql.SQLException: Field 'name' doesn't have a default value
+2021-01-06 23:15:22.771 [http-nio-8001-exec-7] ERROR f.k.s.exceptionhandler.GlobalExceptionHandler - 
+### Error updating database.  Cause: java.sql.SQLException: Field 'name' doesn't have a default value
+### The error may involve fun.krits.eduservice.mapper.EduTeacherMapper.insert-Inline
+### The error occurred while setting parameters
+### SQL: INSERT INTO edu_teacher  ( id,        gmt_create, gmt_modified )  VALUES  ( ?,        ?, ? )
+### Cause: java.sql.SQLException: Field 'name' doesn't have a default value
+; Field 'name' doesn't have a default value; nested exception is java.sql.SQLException: Field 'name' doesn't have a default value
+2021-01-06 23:15:22.905 [http-nio-8001-exec-9] ERROR f.k.s.exceptionhandler.GlobalExceptionHandler - 
+### Error updating database.  Cause: java.sql.SQLException: Field 'name' doesn't have a default value
+### The error may involve fun.krits.eduservice.mapper.EduTeacherMapper.insert-Inline
+### The error occurred while setting parameters
+### SQL: INSERT INTO edu_teacher  ( id,        gmt_create, gmt_modified )  VALUES  ( ?,        ?, ? )
+### Cause: java.sql.SQLException: Field 'name' doesn't have a default value
+; Field 'name' doesn't have a default value; nested exception is java.sql.SQLException: Field 'name' doesn't have a default value
+2021-01-06 23:15:46.561 [http-nio-8001-exec-10] ERROR f.k.s.exceptionhandler.GlobalExceptionHandler - 
+### Error updating database.  Cause: java.sql.SQLIntegrityConstraintViolationException: Duplicata du champ 'xxx' pour la clef 'uk_name'
+### The error may involve fun.krits.eduservice.mapper.EduTeacherMapper.insert-Inline
+### The error occurred while setting parameters
+### SQL: INSERT INTO edu_teacher  ( id, name, intro, career, level,  sort,  gmt_create, gmt_modified )  VALUES  ( ?, ?, ?, ?, ?,  ?,  ?, ? )
+### Cause: java.sql.SQLIntegrityConstraintViolationException: Duplicata du champ 'xxx' pour la clef 'uk_name'
+; Duplicata du champ 'xxx' pour la clef 'uk_name'; nested exception is java.sql.SQLIntegrityConstraintViolationException: Duplicata du champ 'xxx' pour la clef 'uk_name'
+2021-01-06 23:18:52.296 [http-nio-8001-exec-8] ERROR f.k.s.exceptionhandler.GlobalExceptionHandler - 
+### Error updating database.  Cause: com.mysql.cj.jdbc.exceptions.MysqlDataTruncation: Data truncation: Data too long for column 'name' at row 1
+### The error may involve fun.krits.eduservice.mapper.EduTeacherMapper.insert-Inline
+### The error occurred while setting parameters
+### SQL: INSERT INTO edu_teacher  ( id, name, intro, career, level,  sort,  gmt_create, gmt_modified )  VALUES  ( ?, ?, ?, ?, ?,  ?,  ?, ? )
+### Cause: com.mysql.cj.jdbc.exceptions.MysqlDataTruncation: Data truncation: Data too long for column 'name' at row 1
+; Data truncation: Data too long for column 'name' at row 1; nested exception is com.mysql.cj.jdbc.exceptions.MysqlDataTruncation: Data truncation: Data too long for column 'name' at row 1

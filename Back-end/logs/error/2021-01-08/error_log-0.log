@@ -1,0 +1,7 @@
+2021-01-08 20:29:00.171 [http-nio-8001-exec-10] ERROR f.k.s.exceptionhandler.GlobalExceptionHandler - 
+### Error updating database.  Cause: java.sql.SQLException: Field 'name' doesn't have a default value
+### The error may involve fun.krits.eduservice.mapper.EduTeacherMapper.insert-Inline
+### The error occurred while setting parameters
+### SQL: INSERT INTO edu_teacher  ( id,     avatar,   gmt_create, gmt_modified )  VALUES  ( ?,     ?,   ?, ? )
+### Cause: java.sql.SQLException: Field 'name' doesn't have a default value
+; Field 'name' doesn't have a default value; nested exception is java.sql.SQLException: Field 'name' doesn't have a default value

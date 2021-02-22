@@ -1,0 +1,86 @@
+2021-02-03 16:22:44.118 [INFO ] fun.krits.eduservice.EduApplication - The following profiles are active: dev
+2021-02-03 16:22:51.217 [INFO ] fun.krits.eduservice.EduApplication - Started EduApplication in 9.339 seconds (JVM running for 11.801)
+2021-02-03 16:25:10.737 [INFO ] fun.krits.eduservice.EduApplication - The following profiles are active: dev
+2021-02-03 16:25:13.864 [INFO ] fun.krits.eduservice.EduApplication - Started EduApplication in 4.575 seconds (JVM running for 154.448)
+2021-02-03 16:26:13.742 [INFO ] fun.krits.eduservice.EduApplication - The following profiles are active: dev
+2021-02-03 16:26:16.644 [INFO ] fun.krits.eduservice.EduApplication - Started EduApplication in 4.426 seconds (JVM running for 217.227)
+2021-02-03 16:27:33.362 [INFO ] fun.krits.eduservice.EduApplication - The following profiles are active: dev
+2021-02-03 16:27:37.357 [INFO ] fun.krits.eduservice.EduApplication - Started EduApplication in 6.103 seconds (JVM running for 297.941)
+2021-02-03 17:09:32.715 [INFO ] fun.krits.eduservice.EduApplication - The following profiles are active: dev
+2021-02-03 17:09:36.967 [INFO ] fun.krits.eduservice.EduApplication - Started EduApplication in 7.091 seconds (JVM running for 2817.55)
+2021-02-03 17:11:56.244 [INFO ] fun.krits.eduservice.EduApplication - The following profiles are active: dev
+2021-02-03 17:11:59.877 [INFO ] fun.krits.eduservice.EduApplication - Started EduApplication in 5.873 seconds (JVM running for 2960.46)
+2021-02-03 17:13:38.301 [INFO ] fun.krits.eduservice.EduApplication - The following profiles are active: dev
+2021-02-03 17:13:42.876 [INFO ] fun.krits.eduservice.EduApplication - Started EduApplication in 6.717 seconds (JVM running for 3063.459)
+2021-02-03 17:15:16.320 [INFO ] fun.krits.eduservice.EduApplication - The following profiles are active: dev
+2021-02-03 17:15:19.475 [INFO ] fun.krits.eduservice.EduApplication - Started EduApplication in 5.014 seconds (JVM running for 3160.059)
+2021-02-03 17:17:36.069 [INFO ] fun.krits.eduservice.EduApplication - The following profiles are active: dev
+2021-02-03 17:17:39.530 [INFO ] fun.krits.eduservice.EduApplication - Started EduApplication in 5.377 seconds (JVM running for 3300.114)
+2021-02-03 17:17:46.093 [INFO ] fun.krits.eduservice.EduApplication - The following profiles are active: dev
+2021-02-03 17:17:48.844 [INFO ] fun.krits.eduservice.EduApplication - Started EduApplication in 4.296 seconds (JVM running for 3309.428)
+2021-02-03 17:18:12.760 [INFO ] fun.krits.eduservice.EduApplication - The following profiles are active: dev
+2021-02-03 17:19:09.486 [INFO ] fun.krits.eduservice.EduApplication - The following profiles are active: dev
+2021-02-03 17:19:14.356 [INFO ] fun.krits.eduservice.EduApplication - Started EduApplication in 6.972 seconds (JVM running for 3394.94)
+2021-02-03 17:19:19.703 [INFO ] fun.krits.eduservice.EduApplication - The following profiles are active: dev
+2021-02-03 17:19:23.452 [INFO ] fun.krits.eduservice.EduApplication - Started EduApplication in 5.877 seconds (JVM running for 3404.037)
+2021-02-03 17:19:47.771 [INFO ] fun.krits.eduservice.EduApplication - The following profiles are active: dev
+2021-02-03 17:19:51.880 [INFO ] fun.krits.eduservice.EduApplication - Started EduApplication in 6.156 seconds (JVM running for 3432.463)
+2021-02-03 17:20:40.977 [INFO ] fun.krits.eduservice.EduApplication - The following profiles are active: dev
+2021-02-03 17:20:43.900 [INFO ] fun.krits.eduservice.EduApplication - Started EduApplication in 4.716 seconds (JVM running for 3484.485)
+2021-02-03 17:21:41.600 [INFO ] fun.krits.eduservice.EduApplication - The following profiles are active: dev
+2021-02-03 17:21:46.139 [INFO ] fun.krits.eduservice.EduApplication - Started EduApplication in 7.386 seconds (JVM running for 3546.724)
+2021-02-03 17:23:37.604 [INFO ] fun.krits.eduservice.EduApplication - The following profiles are active: dev
+2021-02-03 17:23:42.839 [INFO ] fun.krits.eduservice.EduApplication - Started EduApplication in 7.52 seconds (JVM running for 3663.424)
+2021-02-03 18:06:27.837 [INFO ] fun.krits.eduservice.EduApplication - The following profiles are active: dev
+2021-02-03 18:07:16.628 [INFO ] fun.krits.eduservice.EduApplication - The following profiles are active: dev
+2021-02-03 18:07:19.179 [INFO ] fun.krits.eduservice.EduApplication - Started EduApplication in 3.868 seconds (JVM running for 6279.763)
+2021-02-03 19:12:27.335 [INFO ] fun.krits.eduservice.EduApplication - The following profiles are active: dev
+2021-02-03 19:12:30.929 [INFO ] fun.krits.eduservice.EduApplication - Started EduApplication in 5.465 seconds (JVM running for 10191.513)
+2021-02-03 19:13:00.960 [INFO ] fun.krits.eduservice.EduApplication - The following profiles are active: dev
+2021-02-03 19:13:05.381 [INFO ] fun.krits.eduservice.EduApplication - Started EduApplication in 6.438 seconds (JVM running for 10225.965)
+2021-02-03 19:16:20.482 [INFO ] fun.krits.eduservice.EduApplication - The following profiles are active: dev
+2021-02-03 19:16:23.860 [INFO ] fun.krits.eduservice.EduApplication - Started EduApplication in 5.218 seconds (JVM running for 10424.445)
+2021-02-03 19:16:53.058 [INFO ] fun.krits.eduservice.EduApplication - The following profiles are active: dev
+2021-02-03 19:16:56.546 [INFO ] fun.krits.eduservice.EduApplication - Started EduApplication in 5.63 seconds (JVM running for 10457.13)
+2021-02-03 19:17:16.092 [INFO ] fun.krits.eduservice.EduApplication - The following profiles are active: dev
+2021-02-03 19:17:18.732 [INFO ] fun.krits.eduservice.EduApplication - Started EduApplication in 4.181 seconds (JVM running for 10479.316)
+2021-02-03 19:19:34.373 [INFO ] fun.krits.eduservice.EduApplication - The following profiles are active: dev
+2021-02-03 19:19:37.073 [INFO ] fun.krits.eduservice.EduApplication - Started EduApplication in 4.205 seconds (JVM running for 10617.658)
+2021-02-03 19:23:54.375 [INFO ] fun.krits.eduservice.EduApplication - The following profiles are active: dev
+2021-02-03 19:23:57.387 [INFO ] fun.krits.eduservice.EduApplication - Started EduApplication in 4.455 seconds (JVM running for 10877.97)
+2021-02-03 21:41:00.778 [INFO ] fun.krits.eduservice.EduApplication - The following profiles are active: dev
+2021-02-03 21:41:05.843 [INFO ] fun.krits.eduservice.EduApplication - Started EduApplication in 6.898 seconds (JVM running for 19106.427)
+2021-02-03 21:41:39.881 [INFO ] fun.krits.eduservice.EduApplication - The following profiles are active: dev
+2021-02-03 21:41:44.139 [INFO ] fun.krits.eduservice.EduApplication - Started EduApplication in 6.438 seconds (JVM running for 19144.723)
+2021-02-03 21:58:15.903 [INFO ] fun.krits.eduservice.EduApplication - The following profiles are active: dev
+2021-02-03 21:58:18.506 [INFO ] fun.krits.eduservice.EduApplication - Started EduApplication in 3.959 seconds (JVM running for 20139.091)
+2021-02-03 21:59:07.240 [INFO ] fun.krits.eduservice.EduApplication - The following profiles are active: dev
+2021-02-03 21:59:09.880 [INFO ] fun.krits.eduservice.EduApplication - Started EduApplication in 3.776 seconds (JVM running for 20190.464)
+2021-02-03 22:00:15.800 [INFO ] fun.krits.eduservice.EduApplication - The following profiles are active: dev
+2021-02-03 22:00:19.260 [INFO ] fun.krits.eduservice.EduApplication - Started EduApplication in 4.86 seconds (JVM running for 20259.844)
+2021-02-03 22:00:52.968 [INFO ] fun.krits.eduservice.EduApplication - The following profiles are active: dev
+2021-02-03 22:00:56.368 [INFO ] fun.krits.eduservice.EduApplication - Started EduApplication in 5.143 seconds (JVM running for 20296.953)
+2021-02-03 22:02:01.267 [INFO ] fun.krits.eduservice.EduApplication - The following profiles are active: dev
+2021-02-03 22:02:05.714 [INFO ] fun.krits.eduservice.EduApplication - The following profiles are active: dev
+2021-02-03 22:02:07.343 [INFO ] fun.krits.eduservice.EduApplication - The following profiles are active: dev
+2021-02-03 22:02:09.486 [INFO ] fun.krits.eduservice.EduApplication - Started EduApplication in 5.362 seconds (JVM running for 20370.07)
+2021-02-03 22:02:30.749 [INFO ] fun.krits.eduservice.EduApplication - The following profiles are active: dev
+2021-02-03 22:02:31.020 [INFO ] fun.krits.eduservice.EduApplication - The following profiles are active: dev
+2021-02-03 22:02:34.088 [INFO ] fun.krits.eduservice.EduApplication - Started EduApplication in 5.176 seconds (JVM running for 20394.673)
+2021-02-03 22:23:43.941 [INFO ] fun.krits.eduservice.EduApplication - The following profiles are active: dev
+2021-02-03 22:23:44.462 [INFO ] fun.krits.eduservice.EduApplication - The following profiles are active: dev
+2021-02-03 22:23:47.686 [INFO ] fun.krits.eduservice.EduApplication - Started EduApplication in 5.711 seconds (JVM running for 21668.27)
+2021-02-03 22:39:31.117 [INFO ] fun.krits.eduservice.EduApplication - The following profiles are active: dev
+2021-02-03 22:39:31.348 [INFO ] fun.krits.eduservice.EduApplication - The following profiles are active: dev
+2021-02-03 22:39:34.865 [INFO ] fun.krits.eduservice.EduApplication - Started EduApplication in 5.709 seconds (JVM running for 22615.448)
+2021-02-03 22:47:18.143 [INFO ] fun.krits.eduservice.EduApplication - The following profiles are active: dev
+2021-02-03 22:47:18.762 [INFO ] fun.krits.eduservice.EduApplication - The following profiles are active: dev
+2021-02-03 22:47:21.309 [INFO ] fun.krits.eduservice.EduApplication - Started EduApplication in 5.09 seconds (JVM running for 23081.894)
+2021-02-03 22:48:45.709 [INFO ] fun.krits.eduservice.EduApplication - The following profiles are active: dev
+2021-02-03 22:48:45.887 [INFO ] fun.krits.eduservice.EduApplication - The following profiles are active: dev
+2021-02-03 22:48:49.134 [INFO ] fun.krits.eduservice.EduApplication - Started EduApplication in 5.405 seconds (JVM running for 23169.718)
+2021-02-03 23:00:40.579 [INFO ] fun.krits.eduservice.EduApplication - The following profiles are active: dev
+2021-02-03 23:00:41.216 [INFO ] fun.krits.eduservice.EduApplication - The following profiles are active: dev
+2021-02-03 23:00:43.644 [INFO ] fun.krits.eduservice.EduApplication - Started EduApplication in 4.894 seconds (JVM running for 23884.228)
+2021-02-03 23:01:06.350 [INFO ] fun.krits.eduservice.EduApplication - The following profiles are active: dev
+2021-02-03 23:01:12.126 [INFO ] fun.krits.eduservice.EduApplication - Started EduApplication in 8.616 seconds (JVM running for 11.499)

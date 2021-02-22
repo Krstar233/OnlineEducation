@@ -1,0 +1,3 @@
+2021-02-22 18:42:53.435 [INFO ] fun.krits.eduservice.EduApplication - The following profiles are active: dev
+2021-02-22 18:43:28.893 [INFO ] fun.krits.eduservice.EduApplication - The following profiles are active: dev
+2021-02-22 18:43:41.409 [INFO ] fun.krits.eduservice.EduApplication - Started EduApplication in 16.021 seconds (JVM running for 18.325)
