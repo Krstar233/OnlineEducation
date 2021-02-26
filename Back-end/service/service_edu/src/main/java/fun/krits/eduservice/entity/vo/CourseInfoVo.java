@@ -34,4 +34,6 @@ public class CourseInfoVo {
 
     @ApiModelProperty(value = "课程简介")
     private String description;
+
+
 }

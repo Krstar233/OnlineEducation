@@ -1,6 +1,8 @@
 package fun.krits.eduservice.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import fun.krits.eduservice.entity.EduChapter;
 import fun.krits.eduservice.entity.EduCourse;
 import fun.krits.eduservice.entity.EduCourseDescription;
@@ -8,6 +10,8 @@ import fun.krits.eduservice.entity.EduVideo;
 import fun.krits.eduservice.entity.vo.CourseInfoVo;
 import fun.krits.eduservice.entity.vo.CoursePublishVo;
 import fun.krits.eduservice.entity.vo.CourseTableVo;
+import fun.krits.eduservice.entity.vo.front.CourseFrontInfo;
+import fun.krits.eduservice.entity.vo.front.CourseFrontQueryVo;
 import fun.krits.eduservice.mapper.EduCourseMapper;
 import fun.krits.eduservice.service.EduChapterService;
 import fun.krits.eduservice.service.EduCourseDescriptionService;
@@ -130,5 +134,36 @@ public class EduCourseServiceImpl extends ServiceImpl<EduCourseMapper, EduCourse
         QueryWrapper<EduVideo> wrapper2 = new QueryWrapper<>();
         wrapper2.eq("course_id", courseId);
         videoService.remove(wrapper2);
+    }
+
+    @Override
+    public List<EduCourse> getTeacherCourse(String teacherId) {
+        QueryWrapper<EduCourse> wrapper = new QueryWrapper<>();
+        wrapper.eq("teacher_id", teacherId);
+        List<EduCourse> courseList = baseMapper.selectList(wrapper);
+        return courseList;
+    }
+
+    @Override
+    public IPage<EduCourse> frontQuery(CourseFrontQueryVo vo, Long currentPage, Long limit) {
+        QueryWrapper<EduCourse> wrapper = new QueryWrapper<>();
+        String subjectId = vo.getSubjectId();
+        String subjectParentId = vo.getSubjectParentId();
+        String sortBy = vo.getSortBy();
+        if (subjectParentId != null && !subjectParentId.equals("")){
+            wrapper.eq("subject_parent_id", subjectParentId);
+        }if (subjectId != null && !subjectId.equals("")){
+            wrapper.eq("subject_id", subjectId);
+        }if (sortBy != null && !sortBy.equals("")){
+            wrapper.orderByDesc(sortBy);
+        }
+        Page<EduCourse> page = new Page<>(currentPage, limit);
+        return baseMapper.selectPage(page, wrapper);
+    }
+
+    @Override
+    public CourseFrontInfo getCourseFrontInfo(String courseId) {
+        CourseFrontInfo info = baseMapper.getCourseFrontInfo(courseId);
+        return info;
     }
 }

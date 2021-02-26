@@ -3,7 +3,12 @@ package fun.krits.vodservice.service.impl;
 import com.aliyun.vod.upload.impl.UploadVideoImpl;
 import com.aliyun.vod.upload.req.UploadStreamRequest;
 import com.aliyun.vod.upload.resp.UploadStreamResponse;
+import com.aliyuncs.DefaultAcsClient;
+import com.aliyuncs.exceptions.ClientException;
+import com.aliyuncs.vod.model.v20170321.GetVideoPlayAuthRequest;
+import com.aliyuncs.vod.model.v20170321.GetVideoPlayAuthResponse;
 import fun.krits.vodservice.service.VodService;
+import fun.krits.vodservice.utils.InitObject;
 import lombok.SneakyThrows;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
@@ -74,5 +79,21 @@ public class VodServiceImpl implements VodService {
         String fileName = file.getOriginalFilename();
         String title = fileName.substring(0, fileName.lastIndexOf("."));
         return uploadStream(this.keyid, this.keySecret, title, fileName, file.getInputStream());
+    }
+
+    @SneakyThrows
+    @Override
+    public String getVideoAuth(String videoId) {
+
+        DefaultAcsClient client = InitObject.initVodClient(keyid, keySecret);
+        GetVideoPlayAuthResponse response = new GetVideoPlayAuthResponse();
+        response = getVideoPlayAuth(client, videoId);
+        //播放凭证
+        return response.getPlayAuth();
+    }
+    private static GetVideoPlayAuthResponse getVideoPlayAuth(DefaultAcsClient client, String videoId) throws ClientException {
+        GetVideoPlayAuthRequest request = new GetVideoPlayAuthRequest();
+        request.setVideoId(videoId);
+        return client.getAcsResponse(request);
     }
 }

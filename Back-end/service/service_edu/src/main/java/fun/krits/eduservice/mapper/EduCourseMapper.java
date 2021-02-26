@@ -1,11 +1,9 @@
 package fun.krits.eduservice.mapper;
 
-import fun.krits.eduservice.entity.EduCourse;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import fun.krits.eduservice.entity.vo.CourseInfoVo;
+import fun.krits.eduservice.entity.EduCourse;
 import fun.krits.eduservice.entity.vo.CoursePublishVo;
-
-import java.util.List;
+import fun.krits.eduservice.entity.vo.front.CourseFrontInfo;
 
 /**
  * <p>
@@ -17,5 +15,5 @@ import java.util.List;
  */
 public interface EduCourseMapper extends BaseMapper<EduCourse> {
     CoursePublishVo getPublishCourseInfo(String courseId);
-    List<CourseInfoVo> findAllCourseInfo();
+    CourseFrontInfo getCourseFrontInfo(String courseId);
 }

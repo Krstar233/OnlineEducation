@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="IE=edge" >
+<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"/>
+<title>Aliplayer Online Settings</title>
+<link rel="stylesheet" href="https://g.alicdn.com/de/prismplayer/2.9.3/skins/default/aliplayer-min.css" />
+<script type="text/javascript" charset="utf-8" src="https://g.alicdn.com/de/prismplayer/2.9.3/aliplayer-min.js"></script>
+</head>
+<body>
+<div class="prism-player" id="player-con"></div>
+<script>
+var player = new Aliplayer({
+  "id": "player-con",
+  "encryptType":'1',//如果播放加密视频，则需设置encryptType=1，非加密视频无需设置此项
+  "vid" : '31df2da7ffb34874820d1a91d73edf31',
+  "playauth" : 'eyJTZWN1cml0eVRva2VuIjoiQ0FJU2h3TjFxNkZ0NUIyeWZTaklyNWJSRSsvY2k1eHkxcWlCYzNmYnRVUUZUZlpLcFliU2h6ejJJSGxQZTNGaEFPb2V2L2svbVc5VTdmb2Nsck1xR3M4VUd4YVlQWkVyc2M0SG9GTDRKcExGc3QySjZyOEpqc1ZTaFp3eG5saXBzdlhKYXNEVkVmbDJFNVhFTWlJUi8wMGU2TC8rY2lyWXBUWEhWYlNDbFo5Z2FQa09Rd0M4ZGtBb0xkeEtKd3hrMnQxNFVtWFdPYVNDUHdMU2htUEJMVXhtdldnR2wyUnp1NHV5M3ZPZDVoZlpwMXI4eE80YXhlTDBQb1AyVjgxbExacGxlc3FwM0k0U2M3YmFnaFpVNGdscjhxbHg3c3BCNVN5Vmt0eVdHVWhKL3phTElvaXQ3TnBqZmlCMGVvUUFQb3BGcC9YNmp2QWF3UExVbTliWXhncGhCOFIrWGo3RFpZYXV4N0d6ZW9XVE84MCthS3p3TmxuVXo5bUxMZU9WaVE0L1ptOEJQdzQ0RUxoSWFGMElVRUo4RzJDQ2QvWDRvZ3VTT2xuOUVKTG9pdjltamNCSHFIeno1c2VQS2xTMVJMR1U3RDBWSUpkVWJUbHpia1ZKaFQyNEtQZFhMbHdSTEE4OFcraVBNYXgzYlFGRHI1M3ZzVGJiWHpaYjBtcHR1UG56ZDJ4MkJCT3NuMjJVR29BQmJWTW16bjVScmVvTWdhalZsQmw5L045R2Vzekw0V0Q3Y0M4WlpPbjZYNnZyRms4OU9qUFpyYjhxTFp3TGRVcUplajMyMmlCS0JXZVFYZnVWYlZheTI0S2QrV0JMQ1dhd3NiQVZMN2ZqMW5GMkM3UUh6ZlhCWUFua2NILzhwMW1EeDRkeW9WZ2t0M2pMVnA4ckN0ZnRBZzJBOTAyVS9yeklLc0pZVCsySnpFZz0iLCJBdXRoSW5mbyI6IntcIkNJXCI6XCJPR3pDaGFwTXhwc3JnckV4Szk5dndGT2tFVmJYR1Qxd3pmRzRFN2cvWFQ4SjV6Z0l4RXFOcWwzdE5ZZFkzSlpsXCIsXCJDYWxsZXJcIjpcImd4Y3gxVjJFOXJzTnpaK0VlZEQyLzFNZm9hT3YvNjdKblZ0b1ZWQmMvdGs9XCIsXCJFeHBpcmVUaW1lXCI6XCIyMDIxLTAyLTI1VDEyOjEwOjIzWlwiLFwiTWVkaWFJZFwiOlwiMzFkZjJkYTdmZmIzNDg3NDgyMGQxYTkxZDczZWRmMzFcIixcIlNpZ25hdHVyZVwiOlwiMXVMd2N2cDR4dGxyd3NDNmlOc0RMSlBKbXV3PVwifSIsIlZpZGVvTWV0YSI6eyJTdGF0dXMiOiJOb3JtYWwiLCJWaWRlb0lkIjoiMzFkZjJkYTdmZmIzNDg3NDgyMGQxYTkxZDczZWRmMzEiLCJUaXRsZSI6IjYgLSBXaGF0IElmIEkgV2FudCB0byBNb3ZlIEZhc3Rlci5tcDQiLCJDb3ZlclVSTCI6Imh0dHA6Ly9vdXRpbi01NzU4YjkyZTY3N2MxMWViYjc1NDAwMTYzZTFjOTU1Yy5vc3MtY24tc2hhbmdoYWkuYWxpeXVuY3MuY29tLzMxZGYyZGE3ZmZiMzQ4NzQ4MjBkMWE5MWQ3M2VkZjMxL3NuYXBzaG90cy8xNmFiMDM1NzYwNjQ0MDgyOGI0ZTY2M2Q4NDFjNTMwNi0wMDAwMS5qcGc/RXhwaXJlcz0xNjE0MjU4NTIzJk9TU0FjY2Vzc0tleUlkPUxUQUk4YktTWjZkS2pmNDQmU2lnbmF0dXJlPUM2UDRRVU04VHBnb0lyd25qaE9QdWxuWXVCNCUzRCIsIkR1cmF0aW9uIjoxNi4yNzY3fSwiQWNjZXNzS2V5SWQiOiJTVFMuTlVkWFVoZkNTYWpqcVFqUURQQXlmSkN5ZSIsIkFjY2Vzc0tleVNlY3JldCI6IjQ0Z1ZpWFhmNTNuaEF5TlhqbkNLcm5hRnJSZ0VZdzVGM3hjOU5iWnlWcW9QIiwiUmVnaW9uIjoiY24tc2hhbmdoYWkiLCJDdXN0b21lcklkIjoxOTg5NjI0ODIzNzI4OTkxfQ==',
+  "width": "100%",
+  "height": "500px",
+  "autoplay": true,
+  "isLive": false,
+  "rePlay": false,
+  "playsinline": true,
+  "preload": true,
+  "controlBarVisibility": "hover",
+  "useH5Prism": true
+}, function (player) {
+    console.log("The player is created");
+  }
+);
+</script>
+</body>

@@ -16,25 +16,11 @@
             <dd class="c-s-dl-li">
               <ul class="clearfix">
                 <li>
-                  <a title="全部" href="#">全部</a>
+                  <a title="全部" href="#" @click="getAllCourse"
+                     :class="{current: query.subjectParentId==='' || query.subjectParentId===null}">全部</a>
                 </li>
-                <li>
-                  <a title="数据库" href="#">数据库</a>
-                </li>
-                <li class="current">
-                  <a title="外语考试" href="#">外语考试</a>
-                </li>
-                <li>
-                  <a title="教师资格证" href="#">教师资格证</a>
-                </li>
-                <li>
-                  <a title="公务员" href="#">公务员</a>
-                </li>
-                <li>
-                  <a title="移动开发" href="#">移动开发</a>
-                </li>
-                <li>
-                  <a title="操作系统" href="#">操作系统</a>
+                <li v-for="item in subjectTree" :key="item.id" :class="{current:query.subjectParentId===item.id}">
+                  <a :title="item.label" href="#" @click="getSubSubjects(item)">{{item.label}}</a>
                 </li>
               </ul>
             </dd>
@@ -45,14 +31,8 @@
             </dt>
             <dd class="c-s-dl-li">
               <ul class="clearfix">
-                <li>
-                  <a title="职称英语" href="#">职称英语</a>
-                </li>
-                <li>
-                  <a title="英语四级" href="#">英语四级</a>
-                </li>
-                <li>
-                  <a title="英语六级" href="#">英语六级</a>
+                <li v-for="item in subSubjects" :key="item.id" :class="{current:query.subjectId===item.id}">
+                  <a :title="item.label" href="#" @click="setSubSubjectQuery(item.id)">{{item.label}}</a>
                 </li>
               </ul>
             </dd>
@@ -68,14 +48,14 @@
           </section>
           <section class="fl">
             <ol class="js-tap clearfix">
-              <li>
-                <a title="关注度" href="#">关注度</a>
+              <li :class="{'current':query.sortBy === 'view_count', 'bg-orange':query.sortBy === 'view_count'}">
+                <a title="关注度" href="#" @click="setSortBy('view_count')">关注度</a>
               </li>
-              <li>
-                <a title="最新" href="#">最新</a>
+              <li :class="{'current':query.sortBy === 'gmt_modified', 'bg-orange':query.sortBy === 'gmt_modified'}">
+                <a title="最新" href="#" @click="setSortBy('gmt_modified')">最新</a>
               </li>
-              <li class="current bg-orange">
-                <a title="价格" href="#">价格&nbsp;
+              <li :class="{'current':query.sortBy === 'price', 'bg-orange':query.sortBy === 'price'}">
+                <a title="价格" href="#" @click="setSortBy('price')">价格&nbsp;
                   <span>↓</span>
                 </a>
               </li>
@@ -84,209 +64,33 @@
         </div>
         <div class="mt40">
           <!-- /无数据提示 开始-->
-          <section class="no-data-wrap">
+          <section class="no-data-wrap" v-if="courseList.length === 0">
             <em class="icon30 no-data-ico">&nbsp;</em>
             <span class="c-666 fsize14 ml10 vam">没有相关数据，小编正在努力整理中...</span>
           </section>
           <!-- /无数据提示 结束-->
-          <article class="comm-course-list">
+          <article class="comm-course-list" v-else>
             <ul class="of" id="bna">
-              <li>
+              <li v-for="course in courseList" :key="course.id">
                 <div class="cc-l-wrap">
                   <section class="course-img">
-                    <img src="~/assets/photo/course/1442295592705.jpg" class="img-responsive" alt="听力口语">
+                    <img :src="course.cover" class="img-responsive" :alt="course.title">
                     <div class="cc-mask">
-                      <a href="/course/1" title="开始学习" class="comm-btn c-btn-1">开始学习</a>
+                      <a :href="'/course/'+course.id" title="开始学习" class="comm-btn c-btn-1">开始学习</a>
                     </div>
                   </section>
                   <h3 class="hLh30 txtOf mt10">
-                    <a href="/course/1" title="听力口语" class="course-title fsize18 c-333">听力口语</a>
+                    <a :href="'/course/'+course.id" :title="course.title" class="course-title fsize18 c-333">{{course.title}}</a>
                   </h3>
                   <section class="mt10 hLh20 of">
                     <span class="fr jgTag bg-green">
-                      <i class="c-fff fsize12 f-fA">免费</i>
+                      <i class="c-fff fsize12 f-fA" v-if="course.price === 0">免费</i>
+                      <i class="c-fff fsize12 f-fA" v-else>{{course.price}}</i>
                     </span>
                     <span class="fl jgAttr c-ccc f-fA">
-                      <i class="c-999 f-fA">9634人学习</i>
+                      <i class="c-999 f-fA">{{ course.buyCount }}人学习</i>
                       |
                       <i class="c-999 f-fA">9634评论</i>
-                    </span>
-                  </section>
-                </div>
-              </li>
-              <li>
-                <div class="cc-l-wrap">
-                  <section class="course-img">
-                    <img src="~/assets/photo/course/1442295581911.jpg" class="img-responsive" alt="Java精品课程">
-                    <div class="cc-mask">
-                      <a href="/course/1" title="开始学习" class="comm-btn c-btn-1">开始学习</a>
-                    </div>
-                  </section>
-                  <h3 class="hLh30 txtOf mt10">
-                    <a href="/course/1" title="Java精品课程" class="course-title fsize18 c-333">Java精品课程</a>
-                  </h3>
-                  <section class="mt10 hLh20 of">
-                    <span class="fr jgTag bg-green">
-                      <i class="c-fff fsize12 f-fA">免费</i>
-                    </span>
-                    <span class="fl jgAttr c-ccc f-fA">
-                      <i class="c-999 f-fA">501人学习</i>
-                      |
-                      <i class="c-999 f-fA">501评论</i>
-                    </span>
-                  </section>
-                </div>
-              </li>
-              <li>
-                <div class="cc-l-wrap">
-                  <section class="course-img">
-                    <img src="~/assets/photo/course/1442295604295.jpg" class="img-responsive" alt="C4D零基础">
-                    <div class="cc-mask">
-                      <a href="/course/1" title="开始学习" class="comm-btn c-btn-1">开始学习</a>
-                    </div>
-                  </section>
-                  <h3 class="hLh30 txtOf mt10">
-                    <a href="/course/1" title="C4D零基础" class="course-title fsize18 c-333">C4D零基础</a>
-                  </h3>
-                  <section class="mt10 hLh20 of">
-                    <span class="fr jgTag bg-green">
-                      <i class="c-fff fsize12 f-fA">免费</i>
-                    </span>
-                    <span class="fl jgAttr c-ccc f-fA">
-                      <i class="c-999 f-fA">300人学习</i>
-                      |
-                      <i class="c-999 f-fA">300评论</i>
-                    </span>
-                  </section>
-                </div>
-              </li>
-              <li>
-                <div class="cc-l-wrap">
-                  <section class="course-img">
-                    <img
-                      src="~/assets/photo/course/1442302831779.jpg"
-                      class="img-responsive"
-                      alt="数学给宝宝带来的兴趣"
-                    >
-                    <div class="cc-mask">
-                      <a href="/course/1" title="开始学习" class="comm-btn c-btn-1">开始学习</a>
-                    </div>
-                  </section>
-                  <h3 class="hLh30 txtOf mt10">
-                    <a href="/course/1" title="数学给宝宝带来的兴趣" class="course-title fsize18 c-333">数学给宝宝带来的兴趣</a>
-                  </h3>
-                  <section class="mt10 hLh20 of">
-                    <span class="fr jgTag bg-green">
-                      <i class="c-fff fsize12 f-fA">免费</i>
-                    </span>
-                    <span class="fl jgAttr c-ccc f-fA">
-                      <i class="c-999 f-fA">256人学习</i>
-                      |
-                      <i class="c-999 f-fA">256评论</i>
-                    </span>
-                  </section>
-                </div>
-              </li>
-              <li>
-                <div class="cc-l-wrap">
-                  <section class="course-img">
-                    <img
-                      src="~/assets/photo/course/1442295455437.jpg"
-                      class="img-responsive"
-                      alt="零基础入门学习Python课程学习"
-                    >
-                    <div class="cc-mask">
-                      <a href="/course/1" title="开始学习" class="comm-btn c-btn-1">开始学习</a>
-                    </div>
-                  </section>
-                  <h3 class="hLh30 txtOf mt10">
-                    <a
-                      href="/course/1"
-                      title="零基础入门学习Python课程学习"
-                      class="course-title fsize18 c-333"
-                    >零基础入门学习Python课程学习</a>
-                  </h3>
-                  <section class="mt10 hLh20 of">
-                    <span class="fr jgTag bg-green">
-                      <i class="c-fff fsize12 f-fA">免费</i>
-                    </span>
-                    <span class="fl jgAttr c-ccc f-fA">
-                      <i class="c-999 f-fA">137人学习</i>
-                      |
-                      <i class="c-999 f-fA">137评论</i>
-                    </span>
-                  </section>
-                </div>
-              </li>
-              <li>
-                <div class="cc-l-wrap">
-                  <section class="course-img">
-                    <img
-                      src="~/assets/photo/course/1442295570359.jpg"
-                      class="img-responsive"
-                      alt="MySql从入门到精通"
-                    >
-                    <div class="cc-mask">
-                      <a href="/course/1" title="开始学习" class="comm-btn c-btn-1">开始学习</a>
-                    </div>
-                  </section>
-                  <h3 class="hLh30 txtOf mt10">
-                    <a href="/course/1" title="MySql从入门到精通" class="course-title fsize18 c-333">MySql从入门到精通</a>
-                  </h3>
-                  <section class="mt10 hLh20 of">
-                    <span class="fr jgTag bg-green">
-                      <i class="c-fff fsize12 f-fA">免费</i>
-                    </span>
-                    <span class="fl jgAttr c-ccc f-fA">
-                      <i class="c-999 f-fA">125人学习</i>
-                      |
-                      <i class="c-999 f-fA">125评论</i>
-                    </span>
-                  </section>
-                </div>
-              </li>
-              <li>
-                <div class="cc-l-wrap">
-                  <section class="course-img">
-                    <img src="~/assets/photo/course/1442302852837.jpg" class="img-responsive" alt="搜索引擎优化技术">
-                    <div class="cc-mask">
-                      <a href="/course/1" title="开始学习" class="comm-btn c-btn-1">开始学习</a>
-                    </div>
-                  </section>
-                  <h3 class="hLh30 txtOf mt10">
-                    <a href="/course/1" title="搜索引擎优化技术" class="course-title fsize18 c-333">搜索引擎优化技术</a>
-                  </h3>
-                  <section class="mt10 hLh20 of">
-                    <span class="fr jgTag bg-green">
-                      <i class="c-fff fsize12 f-fA">免费</i>
-                    </span>
-                    <span class="fl jgAttr c-ccc f-fA">
-                      <i class="c-999 f-fA">123人学习</i>
-                      |
-                      <i class="c-999 f-fA">123评论</i>
-                    </span>
-                  </section>
-                </div>
-              </li>
-              <li>
-                <div class="cc-l-wrap">
-                  <section class="course-img">
-                    <img src="~/assets/photo/course/1442295379715.jpg" class="img-responsive" alt="20世纪西方音乐">
-                    <div class="cc-mask">
-                      <a href="/course/1" title="开始学习" class="comm-btn c-btn-1">开始学习</a>
-                    </div>
-                  </section>
-                  <h3 class="hLh30 txtOf mt10">
-                    <a href="/course/1" title="20世纪西方音乐" class="course-title fsize18 c-333">20世纪西方音乐</a>
-                  </h3>
-                  <section class="mt10 hLh20 of">
-                    <span class="fr jgTag bg-green">
-                      <i class="c-fff fsize12 f-fA">免费</i>
-                    </span>
-                    <span class="fl jgAttr c-ccc f-fA">
-                      <i class="c-999 f-fA">34人学习</i>
-                      |
-                      <i class="c-999 f-fA">34评论</i>
                     </span>
                   </section>
                 </div>
@@ -296,14 +100,18 @@
           </article>
         </div>
         <!-- 公共分页 开始 -->
-        <div>
+        <div v-if="courseList.length !== 0">
           <div class="paging">
-            <a class="undisable" title>首</a>
-            <a id="backpage" class="undisable" href="#" title>&lt;</a>
-            <a href="#" title class="current undisable">1</a>
-            <a href="#" title>2</a>
-            <a id="nextpage" href="#" title>&gt;</a>
-            <a href="#" title>末</a>
+            <!-- undisable这个class是否存在，取决于数据属性hasPrevious -->
+            <a href="#" title="首页" @click="firstPage">首</a>
+            <a href="#" title="前一页" v-if="currentPage != 1" @click="lastPage">&lt;</a>
+            <a v-for="page in totalPage" :key="page"
+               href="#"
+               :title="'第'+page+'页'"
+               :class="{current: currentPage == page, undisable: currentPage== page}"
+               @click="getPage(page)">{{page}}</a>
+            <a href="#" title="后一页" v-if="currentPage != totalPage" @click="nextPage">&gt;</a>
+            <a href="#" title="末页" @click="endPage">末</a>
             <div class="clear"></div>
           </div>
         </div>
@@ -314,7 +122,80 @@
   </div>
 </template>
 <script>
+  import course from "../../api/course";
   export default {
-
+    data(){
+      return {
+        subjectTree: [],
+        subSubjects: [],
+        currentPage: 1,
+        totalPage: 0,
+        limit: 8,
+        query: {
+          subjectId: null,
+          subjectParentId: null,
+          sortBy: "price"
+        },
+        courseList: []
+      }
+    },
+    methods: {
+      getCourseList(){
+        course.getCourseList(this.query, this.currentPage, this.limit)
+          .then(res=>{
+            this.totalPage = Math.ceil(res.data.total / this.limit)
+            this.courseList = res.data.courseList
+          })
+      },
+      setSortBy(label){
+        this.query.sortBy = label
+        this.getCourseList()
+      },
+      setSubSubjectQuery(id){
+        this.query.subjectId = id
+        this.getCourseList()
+      },
+      getAllCourse(){
+        this.subSubjects = []
+        this.query.subjectParentId = null
+        this.query.subjectId = null
+        this.getCourseList()
+      },
+      getSubSubjects(parentSubjectNode){
+        this.subSubjects = parentSubjectNode.children
+        this.query.subjectParentId = parentSubjectNode.id
+        this.query.subjectId = null
+        this.getCourseList()
+      },
+      getPage(page){
+        this.currentPage = page
+        this.getCourseList()
+      },
+      firstPage(){
+        this.currentPage = 1
+        this.getCourseList()
+      },
+      lastPage(){
+        if (this.currentPage > 1)
+          this.currentPage--
+        this.getCourseList()
+      },
+      nextPage(){
+        if (this.currentPage < this.totalPage)
+          this.currentPage++
+        this.getCourseList()
+      },
+      endPage(){
+        this.currentPage = this.totalPage
+        this.getCourseList()
+      }
+    },
+    created() {
+      course.getSubjectTree()
+        .then(res=>{
+          this.subjectTree = res.data.subjectTree
+        })
+      this.getCourseList()
+    }
   };
 </script>
