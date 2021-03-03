@@ -34,7 +34,7 @@ public class UcenterMemberController {
     private UcenterMemberService memberService;
 
     //登录
-    @ApiOperation(value = "会员登陆")
+    @ApiOperation(value = "用户登陆")
     @PostMapping("login")
     public Result loginUer(@RequestBody LoginVo member, HttpServletResponse response){
         String token = memberService.login(member);
@@ -43,7 +43,7 @@ public class UcenterMemberController {
     }
 
     //注册
-    @ApiOperation(value = "会员注册")
+    @ApiOperation(value = "用户注册")
     @PostMapping("register")
     public Result register(@RequestBody RegisterVo member){
         memberService.register(member);

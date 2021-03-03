@@ -69,6 +69,7 @@ public class EduTeacherController {
     }
 
     //分页条件查询
+    @ApiOperation(value = "分页条件查询讲师信息")
     @PostMapping("pageTeacherCondition/{current}/{limit}")
     public Result pageTeacherCondition(@PathVariable Long current, @PathVariable Long limit,@RequestBody TeacherQuery teacherQuery){
         // 创建page对象

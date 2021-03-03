@@ -3,6 +3,7 @@ package fun.krits.vodservice.controller;
 
 import fun.krits.commonutils.Result;
 import fun.krits.vodservice.service.VodService;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
@@ -14,6 +15,7 @@ public class VodController {
     @Autowired
     private VodService vodService;
 
+    @ApiOperation("上传视频接口")
     @PostMapping("uploadAliyunVideo")
     public Result uploadAliyunVideo(MultipartFile file){
         //返回上传结果
@@ -21,6 +23,7 @@ public class VodController {
         return Result.ok().data("videoId", videoId);
     }
 
+    @ApiOperation("根据视频id获取视频凭证")
     @GetMapping("get-play-auth/{videoId}")
     public Result getVideoPlayAuth(@PathVariable String videoId){
         String videoAuth = vodService.getVideoAuth(videoId);

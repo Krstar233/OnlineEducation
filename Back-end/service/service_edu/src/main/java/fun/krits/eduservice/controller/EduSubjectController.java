@@ -7,6 +7,7 @@ import fun.krits.eduservice.entity.vo.QuickMap;
 import fun.krits.eduservice.entity.vo.SubjectTreeDfsVO;
 import fun.krits.eduservice.service.EduSubjectService;
 import fun.krits.servicebase.exception.MyException;
+import io.swagger.annotations.ApiOperation;
 import lombok.SneakyThrows;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -31,6 +32,7 @@ public class EduSubjectController {
     private EduSubjectService subjectService;
 
     @SneakyThrows
+    @ApiOperation(value = "添加科目")
     @PostMapping("addSubject")
     public Result addResult(MultipartFile file){
         String contentType = file.getContentType();
@@ -40,6 +42,7 @@ public class EduSubjectController {
         return Result.ok().message("数据读取成功，并已存入数据库!");
     }
 
+    @ApiOperation(value = "获取所有科目信息，返回树形结构")
     @GetMapping("findAll")
     public Result findAll(){
         // 复杂度O(N^2)，有待优化

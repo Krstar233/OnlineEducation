@@ -6,6 +6,7 @@ import fun.krits.eduservice.entity.EduCourse;
 import fun.krits.eduservice.entity.EduTeacher;
 import fun.krits.eduservice.service.EduCourseService;
 import fun.krits.eduservice.service.EduTeacherService;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -26,6 +27,7 @@ public class IndexFrontController {
 
 
     // 查找首页数据
+    @ApiOperation(value = "查找首页数据")
     @GetMapping("index")
     public Result index(){
         QueryWrapper<EduCourse> courseQueryWrapper = new QueryWrapper<>();

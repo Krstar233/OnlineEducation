@@ -4,6 +4,7 @@ import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import fun.krits.commonutils.Result;
 import fun.krits.educms.entity.CrmBanner;
 import fun.krits.educms.service.CrmBannerService;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -22,6 +23,7 @@ public class BannerFrontController {
     private CrmBannerService bannerService;
 
     @Cacheable(value = "banner", key = "'selectIndexList'")
+    @ApiOperation(value = "获取所有的banner，以列表的方式返回")
     @GetMapping("getAllBanner")
     public Result getAllBanner(){
         QueryWrapper<CrmBanner> wrapper = new QueryWrapper<>();

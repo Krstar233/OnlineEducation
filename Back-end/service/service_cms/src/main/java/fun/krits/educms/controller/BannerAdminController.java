@@ -4,6 +4,7 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import fun.krits.commonutils.Result;
 import fun.krits.educms.entity.CrmBanner;
 import fun.krits.educms.service.CrmBannerService;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -16,6 +17,7 @@ public class BannerAdminController {
     private CrmBannerService bannerService;
 
     //分页查询banner
+    @ApiOperation(value = "分页查询banner")
     @GetMapping("pageBanner/{page}/{limit}")
     public Result pageBanner(@PathVariable long page, @PathVariable long limit){
         Page<CrmBanner> bannerPage = new Page<>(page, limit);
@@ -24,6 +26,7 @@ public class BannerAdminController {
     }
 
     //添加 banner
+    @ApiOperation(value = "添加banner")
     @PostMapping("addBanner")
     public Result addBanner(@RequestBody CrmBanner crmBanner){
         bannerService.save(crmBanner);
@@ -31,6 +34,7 @@ public class BannerAdminController {
     }
 
     //修改Banner
+    @ApiOperation(value = "修改banner")
     @PutMapping("update")
     public Result updateById(@RequestBody CrmBanner banner){
         bannerService.updateById(banner);
@@ -38,6 +42,7 @@ public class BannerAdminController {
     }
 
     // 删除Banner
+    @ApiOperation(value = "删除banner")
     @DeleteMapping("remove/{id}")
     public Result remove(@PathVariable String id){
         bannerService.removeById(id);
@@ -45,6 +50,7 @@ public class BannerAdminController {
     }
 
     // 获取Banner
+    @ApiOperation(value = "根据banner的Id获取banner信息")
     @GetMapping("get/{id}")
     public Result getById(@PathVariable String id){
         CrmBanner banner = bannerService.getById(id);

@@ -4,9 +4,7 @@
     <header id="header">
       <section class="container">
         <h1 id="logo">
-          <a href="#" title="谷粒学院">
-            <img src="~/assets/img/logo.png" width="100%" alt="谷粒学院">
-          </a>
+          <a href="/" style="color: #606266; text-decoration: none;">在线课堂平台</a>
         </h1>
         <div class="h-r-nsl">
           <ul class="nav">
@@ -19,12 +17,12 @@
             <router-link to="/teacher" tag="li" active-class="current">
               <a>名师</a>
             </router-link>
-            <router-link to="/article" tag="li" active-class="current">
-              <a>文章</a>
-            </router-link>
-            <router-link to="/qa" tag="li" active-class="current">
-              <a>问答</a>
-            </router-link>
+<!--            <router-link to="/article" tag="li" active-class="current">-->
+<!--              <a>文章</a>-->
+<!--            </router-link>-->
+<!--            <router-link to="/qa" tag="li" active-class="current">-->
+<!--              <a>问答</a>-->
+<!--            </router-link>-->
           </ul>
           <!-- / nav -->
           <!-- / nav -->

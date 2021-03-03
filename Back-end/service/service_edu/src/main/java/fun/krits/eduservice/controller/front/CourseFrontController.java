@@ -17,6 +17,7 @@ public class CourseFrontController {
     @Autowired
     private EduCourseService courseService;
 
+    @ApiOperation(value = "根据查询条件，分页查询课程前台所需的信息")
     @PostMapping("query/{currentPage}/{limit}")
     public Result query(@RequestBody CourseFrontQueryVo vo, @PathVariable Long currentPage, @PathVariable Long limit){
         IPage<EduCourse> page = courseService.frontQuery(vo, currentPage, limit);
