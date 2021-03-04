@@ -23,3 +23,4 @@
 - 前端目录（Front-end目录）: 包含两个前端项目
 	- vue-back-ManagerSystem: 后台管理页面项目
 	- vue-front: 前台页面项目
+- config目录: nginx配置文件
