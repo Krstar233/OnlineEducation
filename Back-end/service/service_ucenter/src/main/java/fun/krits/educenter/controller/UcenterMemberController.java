@@ -56,10 +56,14 @@ public class UcenterMemberController {
     public Result getLoginInfo(HttpServletRequest rq){
         String token = rq.getHeader("token");
         if (token == null)
-            throw new MyException("获取失败！");
-        Map<String, Object> tokenBody = JwtUtil.parseToken(token);
-        String memberId = (String) tokenBody.get("id");
-        UcenterMember member = memberService.getById(memberId);
-        return Result.ok().data("userInfo", member);
+            throw new MyException("请登录！");
+        try{
+            Map<String, Object> tokenBody = JwtUtil.parseToken(token);
+            String memberId = (String) tokenBody.get("id");
+            UcenterMember member = memberService.getById(memberId);
+            return Result.ok().data("userInfo", member);
+        }catch (Exception e){
+            throw new MyException("凭证过期，请重新登录！");
+        }
     }
 }

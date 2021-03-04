@@ -31,7 +31,7 @@
         width: '100%',
         height: '500px',
         // 以下可选设置
-        cover: 'https://krits-edu.oss-cn-shenzhen.aliyuncs.com/2021/02/04/cbec6df6d1d040c7ade48dd5f017ade2QQ图片20190412231938.jpg', // 封面
+        cover: 'https://krits-edu.oss-cn-shenzhen.aliyuncs.com/2021/03/04/bf9841ab669b4c5989a7b8534c611f9b28909f42806f180c269c13b7c46021d4.jpg', // 封面
         qualitySort: 'asc', // 清晰度排序
         mediaType: 'video', // 返回音频还是视频
         autoplay: false, // 自动播放
