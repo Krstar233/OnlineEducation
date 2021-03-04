@@ -24,3 +24,4 @@
 	- vue-back-ManagerSystem: 后台管理页面项目
 	- vue-front: 前台页面项目
 - config目录: nginx配置文件
+-  Database目录: 数据库sql文件
