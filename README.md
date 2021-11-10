@@ -13,11 +13,11 @@
 		- common_utils: 各模块公用的工具类等
 		- service_base: 全局配置类、全局异常捕获、swagger配置等
 	- service模块：服务模块，其中包含若干个微服务
- 		- service-edu【[接口文档链接](http://krits.fun:8001/swagger-ui.html#/)】: 主要的接口都在这里，包含了管理后台的登录、教师、课程信息、课程章节、课程小节的数据库操作和业务逻辑。 
-		- service-oss【[接口文档链接](http://krits.fun:8002/swagger-ui.html#/)】: 文件上传服务，阿里云oss存储对接
-		- service-video【[接口文档链接](http://krits.fun:8003/swagger-ui.html#/)】： 视频上传和获取视频播放凭证，阿里云视频点播服务对接
-		- service-cms【[接口文档链接](http://krits.fun:8004/swagger-ui.html#/)】: Banner模块(主页广告牌)，针对Banner的CRUD以及返回首页显示数据，因为这个模块可能经常访问，所以加入了redis缓存
-		- servce-ucenter【[接口文档链接](http://krits.fun:8006/swagger-ui.html#/)】: 用户中心模块，这个模块提供登录注册功能，并为用户办理基于JWT技术生成的token凭证
+ 		- service-edu: 主要的接口都在这里，包含了管理后台的登录、教师、课程信息、课程章节、课程小节的数据库操作和业务逻辑。 
+		- service-oss: 文件上传服务，阿里云oss存储对接
+		- service-video： 视频上传和获取视频播放凭证，阿里云视频点播服务对接
+		- service-cms: Banner模块(主页广告牌)，针对Banner的CRUD以及返回首页显示数据，因为这个模块可能经常访问，所以加入了redis缓存
+		- servce-ucenter 用户中心模块，这个模块提供登录注册功能，并为用户办理基于JWT技术生成的token凭证
 - 前端目录（Front-end目录）: 包含两个前端项目
 	- vue-back-ManagerSystem: 后台管理页面项目
 	- vue-front: 前台页面项目
